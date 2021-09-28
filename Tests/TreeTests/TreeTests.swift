@@ -2,10 +2,11 @@ import XCTest
 @testable import Tree
 
 final class TreeTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(Tree().text, "Hello, World!")
+
+    func testMap() {
+        XCTAssertEqual(
+            Tree.nonEmpty(.leaf(3)).map({ "\($0)" }),
+            Tree.nonEmpty(.leaf("3"))
+        )
     }
 }
