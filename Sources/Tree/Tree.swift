@@ -1,6 +1,10 @@
-public struct Tree {
-    public private(set) var text = "Hello, World!"
+import Foundation
+@_exported import List
 
-    public init() {
-    }
+public enum Tree<Element> {
+    case empty
+    indirect case nonEmpty(NonEmptyTree<Element>)
 }
+
+extension Tree: Equatable where Element: Equatable {}
+extension Tree: Hashable where Element: Hashable {}
