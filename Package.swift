@@ -12,7 +12,7 @@ let package = Package(
             targets: ["Tree"]),
     ],
     dependencies: [
-        .package(name: "List", url: "git@github.com:spacenation/swift-list.git", .upToNextMajor(from: "0.3.5")),
+        .package(name: "List", url: "git@github.com:spacenation/swift-list.git", .upToNextMajor(from: "1.0.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
